@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Adkoodo Creative Studio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #f7f8f5;
+            color: #172d2a;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            border-bottom: 1px solid #e5e8e2;
+        }
+
+        .logo {
+            color: #172d2a;
+            font-size: 28px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #172d2a;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 70px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(40px, 5vw, 65px);
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #328577;
+        }
+
+        .intro {
+            color: #68736f;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .contact-details p {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 10px 35px #172d2a0b;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 20px;
+            border: 1px solid #dfe5df;
+            border-radius: 8px;
+            font: inherit;
+            font-size: 14px;
+            outline: none;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #328577;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 30px;
+            background: #172d2a;
+            color: white;
+            font: inherit;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #328577;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #e5e8e2;
+            color: #68736f;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                padding: 20px;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin: 35px auto;
+                padding: 20px;
+            }
+
+            .contact-form {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a class="logo" href="index.html">adkoodo</a>
+        <a class="back-link" href="index.html">← Back to home</a>
+    </nav>
+
+    <main class="contact-container">
+
+        <section>
+            <p class="eyebrow">Have a project in mind?</p>
+
+            <h1>Let's create<br>something <span>great.</span></h1>
+
+            <p class="intro">
+                Tell us about your idea. Whether you need branding,
+                social media designs, a website or SEO, we'd love
+                to hear from you.
+            </p>
+
+            <div class="contact-details">
+                <p>✦ Branding & Visual Identity</p>
+                <p>✦ Social Media Design</p>
+                <p>✦ Website Design & SEO</p>
+                <p>✦ Creative Campaigns</p>
+            </div>
+        </section>
+
+        <form class="contact-form"
+              action="https://formsubmit.co/"
+              method="POST">
+
+            <input type="hidden" name="_subject"
+                   value="New Adkoodo Client Enquiry">
+
+            <input type="hidden" name="_captcha" value="true">
+
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your name" required>
+
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <label for="service">What do you need?</label>
+            <select id="service" name="service" required>
+                <option value="">Choose a service</option>
+                <option>Branding</option>
+                <option>Social Media Design</option>
+                <option>Website Design</option>
+                <option>SEO</option>
+                <option>Creative Campaign</option>
+                <option>Other</option>
+            </select>
+
+            <label for="message">Tell us about your project</label>
+            <textarea id="message" name="message"
+                      placeholder="Describe your idea..." required></textarea>
+
+            <button type="submit">Send Enquiry →</button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        © 2026 Adkoodo Creative Studio. All rights reserved.
+    </footer>
+
+</body>
+</html>
