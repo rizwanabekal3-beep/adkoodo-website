@@ -287,13 +287,15 @@ nav
     color: #77817f;
     margin-bottom: 35px;
 }
-
+.services-title{
+    color:#024f3f
+}
 .services h2 {
     font-size: 32px;
     font-weight: 500;
     letter-spacing: -1px;
     margin: 0 0 30px;
-    color: #172b2b;
+    color: #163e3e;
 }
 
 .service-grid {
@@ -705,5 +707,51 @@ footer
     {
         opacity:1;
         transform:none
+    }
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: #25D366;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    z-index: 9999;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-btn img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .whatsapp-btn {
+        width: 52px;
+        height: 52px;
+        bottom: 18px;
+        right: 18px;
+    }
+
+    .whatsapp-btn img {
+        width: 30px;
+        height: 30px;
     }
 }

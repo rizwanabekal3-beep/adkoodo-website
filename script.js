@@ -39,3 +39,27 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".reveal").forEach(function (element) {
     observer.observe(element);
 });
+const changingText = document.getElementById("changing-text");
+
+const words = [
+  "brands memorable.",
+  "brand identities.",
+  "brand presentations.",
+  "social media.",
+  "creative campaigns.",
+  "digital experiences."
+];
+
+let index = 0;
+
+setInterval(() => {
+  changingText.classList.add("fade-out");
+
+  setTimeout(() => {
+    index = (index + 1) % words.length;
+    changingText.textContent = words[index];
+
+    changingText.classList.remove("fade-out");
+  }, 300);
+
+}, 1000);
